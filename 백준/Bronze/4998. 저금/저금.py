@@ -1,11 +1,11 @@
-import sys
 try:
     while True:
-        cnt =1
-        a,b,c=map(float, sys.stdin.readline().split())
-        while True:
-            if a*(1+b/100) > c: print(cnt); break
-            else:
-                a*=(1+b/100)
-                cnt+=1
+        n, b, m = map(float, input().split())
+        count = 0
+
+        while n < m:
+            n *= (1 + b / 100)
+
+            count += 1
+        print(count)
 except : exit()
